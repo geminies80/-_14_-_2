@@ -40,7 +40,15 @@ class CalcTest(unittest.TestCase):
     
     def test_input_1(self):
         """Символьные переменные"""
-        self.assertEqual(calc_me(9, "m","-"), 'ERROR: it is not supported')
+        self.assertEqual(calc_me("m", 9,"-"), 'ERROR: it is not supported')
+    
+    def test_input_2(self):
+        """Символьные переменные"""
+        self.assertEqual(calc_me(9,"m","-"), 'ERROR: it is not supported')
+
+    def test_input_3(self):
+        """Символьные переменные"""
+        self.assertEqual(calc_me("m", "m","-"), 'ERROR: it is not supported')
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
